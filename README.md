@@ -1,25 +1,24 @@
- Shortcode WordPress para Posts Fixados
 
-Descrição
+# Shortcode WordPress para Posts Fixados
+
+## 🚀 Descrição
 
 Este projeto contém um código PHP para WordPress que cria um shortcode para exibir IDs de posts fixados (sticky posts). Ele é altamente configurável, permitindo controle sobre o índice inicial e o número de posts retornados.
 
-Recursos
+## ✨ Recursos
 
-Suporte para parâmetros dinâmicos:
+- Suporte para parâmetros dinâmicos:
+  - **result**: Total de resultados (personalizável).
+  - **index**: Índice inicial (começando de 0).
+  - **limit**: Limita o número de itens retornados.
+- Ordenação automática dos posts por data de publicação.
+- Fácil implementação via shortcode no WordPress.
 
-result: Total de resultados (personalizável).
+---
 
-index: Índice inicial (começando de 0).
+## 📜 Código Completo
 
-limit: Limita o número de itens retornados.
-
-Ordenação automática dos posts por data de publicação.
-
-Fácil implementação via shortcode no WordPress.
-
-Código Completo
-
+```php
 <?php
 // Define os posts fixados
 function get_fixed_post_shortcode($atts) {
@@ -55,49 +54,72 @@ function get_fixed_post_shortcode($atts) {
 
 add_shortcode('fixed_posts', 'get_fixed_post_shortcode');
 ?>
+```
 
-Uso
+---
 
-Exibir o primeiro post fixado:
+## 📖 Uso
 
+### Exibir o primeiro post fixado:
+
+```html
 [fixed_posts index="0" limit="1"]
+```
 
-Exibir dois posts, pulando o primeiro:
+### Exibir dois posts, pulando o primeiro:
 
+```html
 [fixed_posts index="1" limit="2"]
+```
 
-Exibir todos os posts fixados:
+### Exibir todos os posts fixados:
 
+```html
 [fixed_posts index="0" limit="100"]
+```
 
-Requisitos
+---
 
-WordPress 5.0 ou superior.
+## ⚙️ Requisitos
 
-Tema ou plugin com suporte a shortcodes.
+- WordPress 5.0 ou superior.
+- Tema ou plugin com suporte a shortcodes.
 
-Instalação
+---
 
-Copie o código para o arquivo functions.php do tema ativo ou adicione em um plugin personalizado.
+## 🛠️ Instalação
 
-Salve o arquivo.
+1. Copie o código para o arquivo `functions.php` do tema ativo ou adicione em um plugin personalizado.
+2. Salve o arquivo.
+3. Use o shortcode conforme os exemplos acima.
 
-Use o shortcode conforme os exemplos acima.
+---
 
-Explicação Técnica
+## 🔍 Explicação Técnica
 
-Recebimento de Parâmetros
+1. **Recebimento de Parâmetros**
+   - Define valores padrão e permite substituí-los dinamicamente.
+2. **Busca e Ordenação**
+   - Obtém os IDs dos posts fixados e os ordena por data.
+3. **Filtragem por Índice e Limite**
+   - Seleciona os resultados com base nos parâmetros fornecidos.
+4. **Saída**
+   - Retorna IDs separados por vírgula.
 
-Define valores padrão e permite substituí-los dinamicamente.
+---
 
-Busca e Ordenação
+## 🤝 Contribuição
 
-Obtém os IDs dos posts fixados e os ordena por data.
+Contribuições são bem-vindas! Para sugerir melhorias ou correções, abra uma issue ou envie um pull request.
 
-Filtragem por Índice e Limite
+---
 
-Seleciona os resultados com base nos parâmetros fornecidos.
+## 📄 Licença
 
-Saída
+Este código está disponível sob a licença MIT.
 
-Retorna IDs separados por vírgula.
+
+
+---
+
+> Desenvolvido com ❤️ para WordPress!
